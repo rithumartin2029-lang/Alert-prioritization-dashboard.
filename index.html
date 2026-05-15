@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attention-Aware Alert Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>Attention-Aware Alert Prioritization Dashboard</h1>
+
+        <p>Smart Monitoring Interface for Efficient Alert Management</p>
+
+    </header>
+
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Dashboard Summary -->
+        <div class="summary">
+
+            <div class="card red">
+                <h2 id="criticalCount">2</h2>
+                <p>Critical Alerts</p>
+            </div>
+
+            <div class="card orange">
+                <h2 id="highCount">2</h2>
+                <p>High Alerts</p>
+            </div>
+
+            <div class="card blue">
+                <h2 id="mediumCount">1</h2>
+                <p>Medium Alerts</p>
+            </div>
+
+            <div class="card green">
+                <h2 id="lowCount">1</h2>
+                <p>Low Alerts</p>
+            </div>
+
+        </div>
+
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <input type="text"
+                   id="searchBox"
+                   placeholder="Search alerts..."
+                   onkeyup="searchAlerts()">
+
+            <select onchange="filterAlerts(this.value)">
+
+                <option value="all">All Alerts</option>
+
+                <option value="critical">Critical</option>
+
+                <option value="high">High</option>
+
+                <option value="medium">Medium</option>
+
+                <option value="low">Low</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Alert Section -->
+        <div class="alerts">
+
+            <div class="alert critical">
+                <h3>🔴 Critical Alert</h3>
+                <p>Server temperature exceeded safety threshold.</p>
+            </div>
+
+            <div class="alert critical">
+                <h3>🔴 Critical Alert</h3>
+                <p>Network disconnected in industrial control room.</p>
+            </div>
+
+            <div class="alert high">
+                <h3>🟠 High Alert</h3>
+                <p>Unauthorized login attempt detected.</p>
+            </div>
+
+            <div class="alert high">
+                <h3>🟠 High Alert</h3>
+                <p>CPU usage crossed 90% limit.</p>
+            </div>
+
+            <div class="alert medium">
+                <h3>🔵 Medium Alert</h3>
+                <p>Memory utilization reached 70%.</p>
+            </div>
+
+            <div class="alert low">
+                <h3>🟢 Low Alert</h3>
+                <p>Daily system backup completed successfully.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
